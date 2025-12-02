@@ -24,7 +24,7 @@ fs.readFile("./ids.txt", (err, data) => {
 	});
 
 	ids.forEach(id => {
-		if (id.toString().match(/^(\d+)\1+$/gm)) {
+		if (id.toString().match(/^(\d+)\1$/gm)) {
 			invalidIds.push(id)
 		}
 	})
