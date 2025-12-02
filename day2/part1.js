@@ -6,7 +6,6 @@ fs.readFile("./ids.txt", (err, data) => {
 	data = data.toString().split(",");
 
 	let ids = [];
-	let max = 0;
 	let invalidIds = [];
 	let res = 0;
 
@@ -16,10 +15,8 @@ fs.readFile("./ids.txt", (err, data) => {
 			for (let i = start; i <= end; i++) {
 				ids.push(i);
 			}
-
 		} else {
 			ids.push(id)
-
 		}
 	});
 
@@ -29,11 +26,9 @@ fs.readFile("./ids.txt", (err, data) => {
 		}
 	})
 
-
 	invalidIds.forEach(id => {
 		res = res + id;
 	});
 
 	console.log(res)
-
 });
